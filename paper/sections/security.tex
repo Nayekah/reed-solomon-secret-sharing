@@ -1,0 +1,29 @@
+\section{Security Analysis}
+
+The confidentiality of the framework is inherited from Shamir Secret Sharing. Any adversary who obtains fewer than $t$ valid shares learns no information about the protected AES key beyond what is already possible without the shares \cite{shamir1979}. This is an information-theoretic guarantee of the sharing scheme and does not depend on computational hardness assumptions.
+
+The Reed-Solomon component serves a different role. It improves availability and robustness by correcting a bounded number of corrupted shares during recovery, but it does not reduce the threshold needed to determine the secret polynomial. Therefore, it is incorrect to claim that Reed-Solomon decoding strengthens secrecy. Its benefit is operational: it allows the honest recovery process to survive a limited amount of data corruption.
+
+\subsection{Adversarial Capabilities}
+
+The analysis assumes that an adversary may observe, steal, delete, or modify a subset of stored shares. The adversary may also submit malformed shares during reconstruction in an attempt to induce decoder failure or to force recovery of an incorrect secret. However, the adversary is not assumed to break AES-GCM directly, invert finite-field operations, or compromise the randomness used to generate the Shamir polynomial. These assumptions match the intended application of the framework as a key-management and recovery mechanism rather than as a replacement for the underlying symmetric cipher.
+
+The framework addresses four practical risks:
+\begin{enumerate}
+\item \textit{Single point of failure:} no single location stores the entire AES key.
+\item \textit{Key loss due to partial unavailability:} recovery remains possible as long as the threshold or decoding bound is satisfied.
+\item \textit{Partial share compromise:} fewer than $t$ valid shares do not reveal the secret.
+\item \textit{Limited share corruption:} bounded tampering can be corrected when enough redundancy is available.
+\end{enumerate}
+
+At the same time, several limitations remain:
+\begin{enumerate}
+\item If an attacker acquires at least $t$ valid shares, the key is recoverable by design.
+\item If the reconstruction endpoint is compromised, the attacker may steal the recovered AES key after successful recovery.
+\item The current prototype assumes reliable share authenticity is not provided externally. A malicious actor can still force denial of service by injecting too many invalid shares.
+\item Share storage remains meaningful only if the shares are actually separated across different administrative or physical domains.
+\end{enumerate}
+
+\subsection{Mitigations and Extensions}
+
+Several extensions would strengthen the framework in deployment. Verifiable secret sharing can help participants detect incorrect shares before interpolation, while authenticated or signed share containers can make the corruption source easier to identify \cite{cheraghchi2019}. Operationally, share placement policies should ensure that independent shares are not stored in a single cloud account, server cluster, or administrative domain. Reconstruction should also occur only on a trusted endpoint, because the threshold mechanism protects the stored key but not a machine that is already compromised at the moment of recovery.

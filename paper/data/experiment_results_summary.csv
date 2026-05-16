@@ -1,0 +1,16 @@
+scenario,t,n,m,e,expected,success_rate_pct,key_match_rate_pct,decrypt_rate_pct,mean_share_generation_ms,mean_recovery_ms,mean_storage_overhead_ratio
+Normal recovery,3,5,5,0,Success,100.0,100.0,100.0,0.0145,0.1419,15.0
+Minimum valid recovery,3,5,3,0,Success,100.0,100.0,100.0,0.0141,0.0736,15.0
+Insufficient shares,3,5,2,0,Failure,0.0,0.0,0.0,0.0114,0.0017,15.0
+"One corrupted share, enough redundancy",3,5,5,1,Success,100.0,100.0,100.0,0.0131,0.1781,15.0
+"One corrupted share, not enough redundancy",3,5,4,1,Failure,0.0,0.0,0.0,0.0128,0.0402,15.0
+Larger normal recovery,4,7,7,0,Success,100.0,100.0,100.0,0.0214,0.2937,21.0
+Larger minimum recovery,4,7,4,0,Success,100.0,100.0,100.0,0.0271,0.1375,21.0
+Larger insufficient shares,4,7,3,0,Failure,0.0,0.0,0.0,0.0178,0.0018,21.0
+Correct one corrupted share,4,7,6,1,Success,100.0,100.0,100.0,0.0196,0.2397,21.0
+Correct two corrupted shares,4,8,8,2,Success,100.0,100.0,100.0,0.0198,0.4009,24.0
+Large threshold normal,5,10,10,0,Success,100.0,100.0,100.0,0.0276,0.6451,30.0
+Large threshold minimum,5,10,5,0,Success,100.0,100.0,100.0,0.0275,0.1254,30.0
+Large threshold insufficient,5,10,4,0,Failure,0.0,0.0,0.0,0.0273,0.0018,30.0
+"Large threshold, one corrupted",5,10,7,1,Success,100.0,100.0,100.0,0.0253,0.2841,30.0
+"Large threshold, two corrupted",5,10,9,2,Success,100.0,100.0,100.0,0.0265,0.4787,30.0

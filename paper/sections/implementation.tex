@@ -1,0 +1,22 @@
+\section{Implementation}
+
+\subsection{Software Architecture}
+
+The prototype is implemented in Python 3.12 and organized into modular components:
+\begin{itemize}
+\item \texttt{aes\_utils.py}: AES-256 key generation, AES-GCM encryption and decryption, and conversion between byte strings and field elements.
+\item \texttt{field.py}: prime-field arithmetic, polynomial evaluation, and polynomial division helpers.
+\item \texttt{shamir.py}: random polynomial generation, share creation, ordinary secret reconstruction, share selection, and share corruption simulation.
+\item \texttt{robust\_rs.py}: modular Gaussian elimination, Berlekamp-Welch decoding, and robust secret recovery.
+\item \texttt{experiments.py}: automated scenario execution and timing collection.
+\end{itemize}
+
+This split keeps cryptographic operations, algebraic utilities, and experiment control separate. The layout also makes it easier to replace the reconstruction method in future work, for example with verifiable or authenticated secret sharing variants.
+
+\subsection{Finite-Field and Serialization Choices}
+
+The implementation uses the NIST P-384 prime field in order to embed a 256-bit AES key directly into one field element. This avoids splitting the key into multiple blocks while still keeping the field size reasonably compact. Shares are serialized using fixed-width field encoding for both the $x$ and $y$ coordinates. As a result, each coordinate occupies 48 bytes and each share occupies 96 bytes in the current prototype. This decision simplifies the implementation and makes storage-overhead calculations deterministic, although a more compact representation for the $x$ coordinate is possible.
+
+\subsection{Recovery Logic}
+
+The decoder accepts the set of available shares and automatically tries the largest feasible error budget first, namely $\lfloor (m-t)/2 \rfloor$, before falling back to smaller budgets. For a fixed error count $e$, the implementation solves the linear system induced by \eqref{eq:bw_constraint}, reconstructs $Q(x)$ and $E(x)$, divides the polynomials, and verifies that the quotient has degree less than $t$. The reconstructed constant term is then converted back into a 32-byte AES key. As a final correctness check, AES-GCM decryption must also succeed, which ensures that an algebraically plausible but incorrect secret is rejected.

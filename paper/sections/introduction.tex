@@ -1,0 +1,18 @@
+\section{Introduction}
+
+\lettrine[lines=3,lhang=0.08,loversize=0.15,findent=0.5em,nindent=0em]{T}{he} operational security of symmetric cryptography depends on secret keys. When an encryption key is stored in a single database, device, or password vault, the entire protection mechanism depends on the continued availability and integrity of that one location. The failure modes are immediate: key loss makes ciphertext permanently unreadable, while key compromise allows an attacker to decrypt all protected data. For this reason, practical key management must address both confidentiality and recoverability.
+
+Threshold secret sharing offers a direct way to remove this single point of failure. Shamir's scheme divides a secret into multiple shares such that any threshold number of shares can reconstruct the secret, while any smaller set reveals no information about it \cite{shamir1979}. The construction reduces the access-control problem to polynomial interpolation over a finite field. However, standard reconstruction assumes that the shares presented by participants are correct. In realistic settings this assumption is weak: shares may be unavailable, corrupted by storage faults, or intentionally modified by an adversary.
+
+The close algebraic relationship between Shamir sharing and Reed-Solomon codes makes it natural to strengthen reconstruction with error correction \cite{reedsolomon1960}. Both mechanisms evaluate a low-degree polynomial at distinct field points. As a result, robust recovery can be formulated as recovering the original polynomial from noisy point evaluations, which is precisely the setting addressed by Reed-Solomon decoding algorithms. In particular, the Berlekamp-Welch perspective allows reconstruction to remain correct even when a bounded number of submitted shares are wrong \cite{fedorenko2005}.
+
+This paper studies a practical key recovery prototype rather than a new cryptographic primitive. The protected secret is an AES-256 key \cite{fips197}, used with the AES-GCM authenticated encryption mode \cite{sp80038d}. The contribution lies in implementing a modular end-to-end system and experimentally validating the threshold and error-correction behavior of the resulting recovery process.
+
+The main contributions of this work are as follows:
+\begin{enumerate}
+\item A modular Python implementation that integrates AES-GCM encryption, Shamir share generation, and Reed-Solomon-style Berlekamp-Welch reconstruction into a single key recovery workflow.
+\item An experimental evaluation over fifteen recovery scenarios that cover normal recovery, minimum-threshold recovery, insufficient-share failure, and recovery with corrupted shares.
+\item A grounded analysis showing that robust decoding improves availability and fault tolerance without reducing the secrecy threshold of the original sharing scheme.
+\end{enumerate}
+
+The remainder of the paper is organized as follows. Section II reviews the necessary theoretical background on AES-GCM, finite-field arithmetic, Shamir sharing, Reed-Solomon codes, and Berlekamp-Welch decoding. Section III presents the proposed recovery framework. Section IV describes the implementation. Section V defines the experiments, while Section VI reports the results and discusses their implications. Section VII analyzes the security model and limitations. Section VIII concludes the paper.

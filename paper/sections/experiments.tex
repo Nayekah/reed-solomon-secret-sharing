@@ -1,0 +1,47 @@
+\section{Experimental Design}
+
+\subsection{Scenarios}
+
+The evaluation focuses on correctness, decryption success, failure behavior, timing, and storage overhead. Fifteen scenarios were selected to cover both the threshold property and the Reed-Solomon correction bound. Each scenario was executed for 25 independent trials, giving 375 total runs.
+
+Table~\ref{tab:scenarios} lists the evaluated configurations. The ``available'' count $m$ denotes the number of shares presented to the decoder, while $e$ denotes the number of shares intentionally corrupted before recovery. Scenarios marked as failure are expected to fail either because $m < t$ or because the redundancy condition $m \geq t + 2e$ is not satisfied.
+
+\begin{table*}[!t]
+\caption{Experimental Scenarios and Observed Outcomes Across 25 Trials Per Scenario}
+\label{tab:scenarios}
+\centering
+\scriptsize
+\begin{tabular}{p{2.7in}cccccc}
+\toprule
+\textbf{Scenario} & \textbf{$t$} & \textbf{$n$} & \textbf{$m$} & \textbf{$e$} & \textbf{Observed Success Rate} & \textbf{Mean Recovery (ms)} \\
+\midrule
+Normal recovery & 3 & 5 & 5 & 0 & 100\% & 0.1419 \\
+Minimum valid recovery & 3 & 5 & 3 & 0 & 100\% & 0.0736 \\
+Insufficient shares & 3 & 5 & 2 & 0 & 0\% & 0.0017 \\
+One corrupted share, enough redundancy & 3 & 5 & 5 & 1 & 100\% & 0.1781 \\
+One corrupted share, not enough redundancy & 3 & 5 & 4 & 1 & 0\% & 0.0402 \\
+Larger normal recovery & 4 & 7 & 7 & 0 & 100\% & 0.2937 \\
+Larger minimum recovery & 4 & 7 & 4 & 0 & 100\% & 0.1375 \\
+Larger insufficient shares & 4 & 7 & 3 & 0 & 0\% & 0.0018 \\
+Correct one corrupted share & 4 & 7 & 6 & 1 & 100\% & 0.2397 \\
+Correct two corrupted shares & 4 & 8 & 8 & 2 & 100\% & 0.4009 \\
+Large threshold normal & 5 & 10 & 10 & 0 & 100\% & 0.6451 \\
+Large threshold minimum & 5 & 10 & 5 & 0 & 100\% & 0.1254 \\
+Large threshold insufficient & 5 & 10 & 4 & 0 & 0\% & 0.0018 \\
+Large threshold, one corrupted & 5 & 10 & 7 & 1 & 100\% & 0.2841 \\
+Large threshold, two corrupted & 5 & 10 & 9 & 2 & 100\% & 0.4787 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Measurement Procedure}
+
+Each trial follows the same procedure. First, a fresh AES-256 key is generated and used to encrypt a benchmark plaintext with AES-GCM. Second, the key is split into shares under the specified $(t,n)$ configuration. Third, a random subset of $m$ shares is selected. Fourth, the scenario optionally corrupts $e$ of those shares by modifying their $y$ values. Finally, the recovery stage attempts to reconstruct the key and decrypt the ciphertext. Success is recorded only when the recovered key exactly matches the original key and AES-GCM verification succeeds.
+
+Timing is measured separately for share generation and for recovery. Storage overhead is computed as the total serialized share size divided by the original 32-byte AES key size. Because the serialization format is fixed-width, the overhead depends only on the number of generated shares.
+
+\subsection{Evaluation Metrics}
+
+Five metrics are used in the evaluation. First, \textit{recovery success} records whether the robust decoder returns a candidate secret without violating the algebraic constraints. Second, \textit{key correctness} checks whether the recovered 32-byte value matches the original AES key exactly. Third, \textit{decryption success} checks whether AES-GCM accepts the recovered key and reproduces the original plaintext. Fourth, \textit{recovery latency} measures the wall-clock time of the reconstruction stage. Fifth, \textit{storage overhead} measures the total share footprint relative to the 32-byte secret.
+
+These metrics distinguish between algebraic recovery and application-level recovery. In principle a decoder might output a field element even when it is not the original key. By checking both exact key equality and authenticated decryption, the evaluation rejects such cases. This distinction is important because a key-recovery system is useful only when the recovered secret is operationally valid for the protected ciphertext.

@@ -1,0 +1,92 @@
+\section{Theoretical Background}
+
+\subsection{AES-GCM}
+
+The Advanced Encryption Standard (AES) is a NIST standard block cipher with 128-bit block size and key sizes of 128, 192, and 256 bits \cite{fips197}. This work uses AES-256 because the goal is not only to split a secret but also to protect a realistic high-value key. Encryption is performed with Galois/Counter Mode (GCM), which provides confidentiality together with integrity through authenticated encryption \cite{sp80038d}. In the prototype, the data owner first encrypts a plaintext under AES-GCM and then protects the resulting AES key with the threshold recovery mechanism.
+
+\subsection{Finite-Field Arithmetic}
+
+Shamir sharing and Reed-Solomon decoding both operate over a finite field. Let $\mathbb{F}_{p}$ be a prime field where all additions, subtractions, multiplications, and inverses are taken modulo a prime $p$. The prototype uses the NIST P-384 prime field, which is larger than the 256-bit AES key space and therefore allows an AES-256 key to be embedded directly as a field element without fragmentation.
+
+Given coefficients $a_{0}, a_{1}, \ldots, a_{d} \in \mathbb{F}_{p}$, a polynomial is written as
+\begin{equation}
+f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \cdots + a_{d}x^{d}.
+\label{eq:polynomial}
+\end{equation}
+Polynomial evaluation and interpolation are efficient over $\mathbb{F}_{p}$, which makes the field suitable both for share generation and for robust reconstruction.
+
+\subsection{Shamir Secret Sharing}
+
+In a standard $(t,n)$ Shamir scheme, the secret $s$ is stored as the constant term of a random polynomial of degree $t-1$:
+\begin{equation}
+f(x) = s + a_{1}x + a_{2}x^{2} + \cdots + a_{t-1}x^{t-1},
+\label{eq:shamir}
+\end{equation}
+where $a_{1}, \ldots, a_{t-1}$ are chosen uniformly from $\mathbb{F}_{p}$ \cite{shamir1979}. A share is the pair
+\begin{equation}
+(x_{i}, y_{i}) = (x_{i}, f(x_{i})).
+\label{eq:share}
+\end{equation}
+Any set of $t$ valid shares uniquely determines $f(x)$, and therefore the secret is recovered by evaluating
+\begin{equation}
+s = f(0).
+\label{eq:secret}
+\end{equation}
+If fewer than $t$ shares are known, the missing coefficients remain unconstrained, so the secret remains information-theoretically hidden \cite{shamir1979}.
+
+\subsection{Lagrange Reconstruction}
+
+When no share corruption is present, recovery uses interpolation. Given $t$ valid shares $(x_{1},y_{1}), \ldots, (x_{t},y_{t})$, the polynomial can be written in Lagrange form as
+\begin{equation}
+f(x) = \sum_{i=1}^{t} y_{i}\ell_{i}(x),
+\label{eq:lagrange_poly}
+\end{equation}
+where
+\begin{equation}
+\ell_{i}(x) = \prod_{\substack{1 \leq j \leq t \\ j \neq i}} \frac{x-x_{j}}{x_{i}-x_{j}}.
+\label{eq:lagrange_basis}
+\end{equation}
+Substituting $x=0$ yields the secret directly:
+\begin{equation}
+s = f(0) = \sum_{i=1}^{t} y_{i}\ell_{i}(0).
+\label{eq:lagrange_secret}
+\end{equation}
+This formula is sufficient when all submitted shares are valid, but it fails to provide protection against undetected errors in the $y$ values. That limitation motivates the use of Reed-Solomon decoding during reconstruction.
+
+\subsection{Reed-Solomon Codes}
+
+Reed-Solomon codes also encode information by evaluating a low-degree polynomial at multiple field points \cite{reedsolomon1960}. This structural similarity is the key link used in this paper:
+\begin{equation}
+\text{Shamir sharing} \Longleftrightarrow \text{secure polynomial sharing},
+\end{equation}
+\begin{equation}
+\text{RS decoding} \Longleftrightarrow \text{recovery from noisy shares}.
+\end{equation}
+For a degree-$(t-1)$ polynomial evaluated at $n$ points, the associated Reed-Solomon code has minimum distance
+\begin{equation}
+d_{\min} = n - t + 1.
+\label{eq:distance}
+\end{equation}
+This quantity explains the asymmetry between missing and corrupted shares. Missing shares only reduce the number of equations, so recovery requires at least $m \geq t$ available shares. Corrupted shares are harder because the decoder must both identify errors and recover the polynomial, which requires extra redundancy. In coding-theoretic terms, unique decoding can tolerate up to $\lfloor (d_{\min}-1)/2 \rfloor$ symbol errors when all $n$ evaluations are present.
+
+\subsection{Berlekamp-Welch Decoding}
+
+To recover from corrupted shares, this work adopts a Reed-Solomon-style Berlekamp-Welch approach \cite{fedorenko2005}. Suppose a degree-$(t-1)$ polynomial is observed through $m$ shares, of which at most $e$ are corrupted. Correct recovery is possible when
+\begin{equation}
+m \geq t + 2e.
+\label{eq:bound}
+\end{equation}
+
+The decoder searches for an error-locator polynomial $E(x)$ of degree $e$ and a combined polynomial $Q(x)$ such that
+\begin{equation}
+Q(x_{i}) = y_{i}E(x_{i})
+\label{eq:bw_constraint}
+\end{equation}
+for all received shares $(x_{i}, y_{i})$. If a solution exists and $E(x)$ divides $Q(x)$, then the original secret polynomial is recovered as
+\begin{equation}
+f(x) = \frac{Q(x)}{E(x)}.
+\label{eq:quotient}
+\end{equation}
+The role of $E(x)$ is to vanish at erroneous evaluation points, while $Q(x)$ absorbs the discrepancy between the correct polynomial values and the corrupted observations. In practice the decoder solves a linear system for the unknown coefficients of $Q(x)$ and the non-leading coefficients of $E(x)$, then verifies that the quotient has the expected degree. This verification step is important because it rejects inconsistent share sets instead of silently returning an arbitrary polynomial.
+
+The Reed-Solomon component improves robustness rather than secrecy. It corrects a bounded number of wrong shares, but an adversary who gathers at least $t$ valid shares can still reconstruct the secret by design. This separation between confidentiality and fault tolerance is central to the interpretation of the experimental results.

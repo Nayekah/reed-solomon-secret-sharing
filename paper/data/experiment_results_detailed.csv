@@ -1,0 +1,376 @@
+scenario,trial,threshold,share_count,available_count,corrupted_count,expected_result,recovery_succeeded,key_matches,decryption_succeeded,failure_reason,share_generation_ms,recovery_ms,corrected_error_count,storage_overhead_ratio
+Normal recovery,1,3,5,5,0,Success,True,True,True,,0.053499999921768904,0.2426999999443069,0,15.0
+Normal recovery,2,3,5,5,0,Success,True,True,True,,0.020499996026046574,0.15970000822562724,0,15.0
+Normal recovery,3,3,5,5,0,Success,True,True,True,,0.015300000086426735,0.14449999434873462,0,15.0
+Normal recovery,4,3,5,5,0,Success,True,True,True,,0.01340000017080456,0.15730000450275838,0,15.0
+Normal recovery,5,3,5,5,0,Success,True,True,True,,0.014199991710484028,0.14279999595601112,0,15.0
+Normal recovery,6,3,5,5,0,Success,True,True,True,,0.01379998866468668,0.1365999924018979,0,15.0
+Normal recovery,7,3,5,5,0,Success,True,True,True,,0.01200000406242907,0.13279999257065356,0,15.0
+Normal recovery,8,3,5,5,0,Success,True,True,True,,0.011299998732283711,0.13100000796839595,0,15.0
+Normal recovery,9,3,5,5,0,Success,True,True,True,,0.011500000255182385,0.13120000949129462,0,15.0
+Normal recovery,10,3,5,5,0,Success,True,True,True,,0.012599994079209864,0.13399998715613037,0,15.0
+Normal recovery,11,3,5,5,0,Success,True,True,True,,0.012400007108226418,0.13099999341648072,0,15.0
+Normal recovery,12,3,5,5,0,Success,True,True,True,,0.012299991794861853,0.13499999477062374,0,15.0
+Normal recovery,13,3,5,5,0,Success,True,True,True,,0.012499993317760527,0.13509999553207308,0,15.0
+Normal recovery,14,3,5,5,0,Success,True,True,True,,0.012899996363557875,0.13190000026952475,0,15.0
+Normal recovery,15,3,5,5,0,Success,True,True,True,,0.012099990271963179,0.13089999265503138,0,15.0
+Normal recovery,16,3,5,5,0,Success,True,True,True,,0.01239999255631119,0.1976999919861555,0,15.0
+Normal recovery,17,3,5,5,0,Success,True,True,True,,0.012699994840659201,0.13410000246949494,0,15.0
+Normal recovery,18,3,5,5,0,Success,True,True,True,,0.012500007869675756,0.13169999874662608,0,15.0
+Normal recovery,19,3,5,5,0,Success,True,True,True,,0.01300001167692244,0.12960001186002046,0,15.0
+Normal recovery,20,3,5,5,0,Success,True,True,True,,0.01170000177808106,0.12989999959245324,0,15.0
+Normal recovery,21,3,5,5,0,Success,True,True,True,,0.011800002539530396,0.13040000339969993,0,15.0
+Normal recovery,22,3,5,5,0,Success,True,True,True,,0.011800002539530396,0.12969999806955457,0,15.0
+Normal recovery,23,3,5,5,0,Success,True,True,True,,0.011699987226165831,0.1272000081371516,0,15.0
+Normal recovery,24,3,5,5,0,Success,True,True,True,,0.011799987987615168,0.1297999988310039,0,15.0
+Normal recovery,25,3,5,5,0,Success,True,True,True,,0.01170000177808106,0.12969999806955457,0,15.0
+Minimum valid recovery,1,3,5,3,0,Success,True,True,True,,0.012200005585327744,0.05539999983739108,0,15.0
+Minimum valid recovery,2,3,5,3,0,Success,True,True,True,,0.012099990271963179,0.0695999915478751,0,15.0
+Minimum valid recovery,3,3,5,3,0,Success,True,True,True,,0.011800002539530396,0.056900011259131134,0,15.0
+Minimum valid recovery,4,3,5,3,0,Success,True,True,True,,0.01200000406242907,0.05390000296756625,0,15.0
+Minimum valid recovery,5,3,5,3,0,Success,True,True,True,,0.011099997209385037,0.16889999096747488,0,15.0
+Minimum valid recovery,6,3,5,3,0,Success,True,True,True,,0.034200013033114374,0.14449999434873462,0,15.0
+Minimum valid recovery,7,3,5,3,0,Success,True,True,True,,0.021400002879090607,0.09000000136438757,0,15.0
+Minimum valid recovery,8,3,5,3,0,Success,True,True,True,,0.017499987734481692,0.07850000110920519,0,15.0
+Minimum valid recovery,9,3,5,3,0,Success,True,True,True,,0.016299993149004877,0.07069999992381781,0,15.0
+Minimum valid recovery,10,3,5,3,0,Success,True,True,True,,0.012799995602108538,0.06399999256245792,0,15.0
+Minimum valid recovery,11,3,5,3,0,Success,True,True,True,,0.014199991710484028,0.05919999966863543,0,15.0
+Minimum valid recovery,12,3,5,3,0,Success,True,True,True,,0.01920000067912042,0.05780000356025994,0,15.0
+Minimum valid recovery,13,3,5,3,0,Success,True,True,True,,0.01200000406242907,0.06049999501556158,0,15.0
+Minimum valid recovery,14,3,5,3,0,Success,True,True,True,,0.012200005585327744,0.0568000104976818,0,15.0
+Minimum valid recovery,15,3,5,3,0,Success,True,True,True,,0.012900010915473104,0.15619999612681568,0,15.0
+Minimum valid recovery,16,3,5,3,0,Success,True,True,True,,0.012500007869675756,0.07049999840091914,0,15.0
+Minimum valid recovery,17,3,5,3,0,Success,True,True,True,,0.012699994840659201,0.06180000491440296,0,15.0
+Minimum valid recovery,18,3,5,3,0,Success,True,True,True,,0.012299991794861853,0.056899996707215905,0,15.0
+Minimum valid recovery,19,3,5,3,0,Success,True,True,True,,0.011500000255182385,0.05750000127591193,0,15.0
+Minimum valid recovery,20,3,5,3,0,Success,True,True,True,,0.012299991794861853,0.0577000027988106,0,15.0
+Minimum valid recovery,21,3,5,3,0,Success,True,True,True,,0.012100004823878407,0.055199998314492404,0,15.0
+Minimum valid recovery,22,3,5,3,0,Success,True,True,True,,0.012100004823878407,0.054499992984347045,0,15.0
+Minimum valid recovery,23,3,5,3,0,Success,True,True,True,,0.011500000255182385,0.05560000136028975,0,15.0
+Minimum valid recovery,24,3,5,3,0,Success,True,True,True,,0.012299991794861853,0.05750000127591193,0,15.0
+Minimum valid recovery,25,3,5,3,0,Success,True,True,True,,0.01170000177808106,0.06999999459367245,0,15.0
+Insufficient shares,1,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011800002539530396,0.003600012860260904,0,15.0
+Insufficient shares,2,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011099997209385037,0.002800006768666208,0,15.0
+Insufficient shares,3,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011199997970834374,0.001700012944638729,0,15.0
+Insufficient shares,4,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010799994925037026,0.0013999961083754897,0,15.0
+Insufficient shares,5,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011399999493733048,0.0017999991541728377,0,15.0
+Insufficient shares,6,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011299998732283711,0.0016999983927235007,0,15.0
+Insufficient shares,7,3,5,2,0,Failure,False,False,False,DecodingFailure,0.01060000795405358,0.001300009898841381,0,15.0
+Insufficient shares,8,3,5,2,0,Failure,False,False,False,DecodingFailure,0.01060000795405358,0.0016999983927235007,0,15.0
+Insufficient shares,9,3,5,2,0,Failure,False,False,False,DecodingFailure,0.01060000795405358,0.0012999953469261527,0,15.0
+Insufficient shares,10,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010000003385357559,0.0010999938240274787,0,15.0
+Insufficient shares,11,3,5,2,0,Failure,False,False,False,DecodingFailure,0.009900002623908222,0.001200009137392044,0,15.0
+Insufficient shares,12,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011900003300979733,0.0013999961083754897,0,15.0
+Insufficient shares,13,3,5,2,0,Failure,False,False,False,DecodingFailure,0.011500000255182385,0.0015999976312741637,0,15.0
+Insufficient shares,14,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010800009476952255,0.0013999961083754897,0,15.0
+Insufficient shares,15,3,5,2,0,Failure,False,False,False,DecodingFailure,0.009900002623908222,0.0012999953469261527,0,15.0
+Insufficient shares,16,3,5,2,0,Failure,False,False,False,DecodingFailure,0.009700001101009548,0.0013999961083754897,0,15.0
+Insufficient shares,17,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010099989594891667,0.001100008375942707,0,15.0
+Insufficient shares,18,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010000003385357559,0.0011999945854768157,0,15.0
+Insufficient shares,19,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010899995686486363,0.0011999945854768157,0,15.0
+Insufficient shares,20,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010099989594891667,0.0010999938240274787,0,15.0
+Insufficient shares,21,3,5,2,0,Failure,False,False,False,DecodingFailure,0.009899988071992993,0.0010999938240274787,0,15.0
+Insufficient shares,22,3,5,2,0,Failure,False,False,False,DecodingFailure,0.010200004908256233,0.004599991370923817,0,15.0
+Insufficient shares,23,3,5,2,0,Failure,False,False,False,DecodingFailure,0.023600005079060793,0.002700006007216871,0,15.0
+Insufficient shares,24,3,5,2,0,Failure,False,False,False,DecodingFailure,0.014600009308196604,0.0018999999156221747,0,15.0
+Insufficient shares,25,3,5,2,0,Failure,False,False,False,DecodingFailure,0.012400007108226418,0.0012999953469261527,0,15.0
+"One corrupted share, enough redundancy",1,3,5,5,1,Success,True,True,True,,0.011299998732283711,0.20670000230893493,1,15.0
+"One corrupted share, enough redundancy",2,3,5,5,1,Success,True,True,True,,0.01340000017080456,0.18599999020807445,1,15.0
+"One corrupted share, enough redundancy",3,3,5,5,1,Success,True,True,True,,0.013199998647905886,0.18200000340584666,1,15.0
+"One corrupted share, enough redundancy",4,3,5,5,1,Success,True,True,True,,0.01270000939257443,0.1680999994277954,1,15.0
+"One corrupted share, enough redundancy",5,3,5,5,1,Success,True,True,True,,0.012300006346777081,0.17210000078193843,1,15.0
+"One corrupted share, enough redundancy",6,3,5,5,1,Success,True,True,True,,0.013700002455152571,0.16709999181330204,1,15.0
+"One corrupted share, enough redundancy",7,3,5,5,1,Success,True,True,True,,0.01200000406242907,0.17079999088309705,1,15.0
+"One corrupted share, enough redundancy",8,3,5,5,1,Success,True,True,True,,0.012200005585327744,0.18679999629966915,1,15.0
+"One corrupted share, enough redundancy",9,3,5,5,1,Success,True,True,True,,0.0202999945031479,0.3068999940296635,1,15.0
+"One corrupted share, enough redundancy",10,3,5,5,1,Success,True,True,True,,0.01580000389367342,0.1829000102588907,1,15.0
+"One corrupted share, enough redundancy",11,3,5,5,1,Success,True,True,True,,0.013500000932253897,0.185500000952743,1,15.0
+"One corrupted share, enough redundancy",12,3,5,5,1,Success,True,True,True,,0.012900010915473104,0.17049998859874904,1,15.0
+"One corrupted share, enough redundancy",13,3,5,5,1,Success,True,True,True,,0.02239999594166875,0.1660999987507239,1,15.0
+"One corrupted share, enough redundancy",14,3,5,5,1,Success,True,True,True,,0.012100004823878407,0.16199999663513154,1,15.0
+"One corrupted share, enough redundancy",15,3,5,5,1,Success,True,True,True,,0.01170000177808106,0.1630000042496249,1,15.0
+"One corrupted share, enough redundancy",16,3,5,5,1,Success,True,True,True,,0.011900003300979733,0.16170000890269876,1,15.0
+"One corrupted share, enough redundancy",17,3,5,5,1,Success,True,True,True,,0.011999989510513842,0.1632999919820577,1,15.0
+"One corrupted share, enough redundancy",18,3,5,5,1,Success,True,True,True,,0.010700008715502918,0.1934000028995797,1,15.0
+"One corrupted share, enough redundancy",19,3,5,5,1,Success,True,True,True,,0.011800002539530396,0.15720000374130905,1,15.0
+"One corrupted share, enough redundancy",20,3,5,5,1,Success,True,True,True,,0.01200000406242907,0.16250000044237822,1,15.0
+"One corrupted share, enough redundancy",21,3,5,5,1,Success,True,True,True,,0.011500000255182385,0.16599999798927456,1,15.0
+"One corrupted share, enough redundancy",22,3,5,5,1,Success,True,True,True,,0.011800002539530396,0.1584999990882352,1,15.0
+"One corrupted share, enough redundancy",23,3,5,5,1,Success,True,True,True,,0.011500000255182385,0.18230000569019467,1,15.0
+"One corrupted share, enough redundancy",24,3,5,5,1,Success,True,True,True,,0.01200000406242907,0.1576000067871064,1,15.0
+"One corrupted share, enough redundancy",25,3,5,5,1,Success,True,True,True,,0.011800002539530396,0.1736999984132126,1,15.0
+"One corrupted share, not enough redundancy",1,3,5,4,1,Failure,False,False,False,DecodingFailure,0.012199991033412516,0.044500004150904715,0,15.0
+"One corrupted share, not enough redundancy",2,3,5,4,1,Failure,False,False,False,DecodingFailure,0.012099990271963179,0.04329999501351267,0,15.0
+"One corrupted share, not enough redundancy",3,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011800002539530396,0.03949999518226832,0,15.0
+"One corrupted share, not enough redundancy",4,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011900003300979733,0.041399995097890496,0,15.0
+"One corrupted share, not enough redundancy",5,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011500000255182385,0.041400009649805725,0,15.0
+"One corrupted share, not enough redundancy",6,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011600001016631722,0.03919999289792031,0,15.0
+"One corrupted share, not enough redundancy",7,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011399999493733048,0.037999998312443495,0,15.0
+"One corrupted share, not enough redundancy",8,3,5,4,1,Failure,False,False,False,DecodingFailure,0.012600008631125093,0.03959999594371766,0,15.0
+"One corrupted share, not enough redundancy",9,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011099997209385037,0.038700003642588854,0,15.0
+"One corrupted share, not enough redundancy",10,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011299998732283711,0.03840000135824084,0,15.0
+"One corrupted share, not enough redundancy",11,3,5,4,1,Failure,False,False,False,DecodingFailure,0.010799994925037026,0.037699996028095484,0,15.0
+"One corrupted share, not enough redundancy",12,3,5,4,1,Failure,False,False,False,DecodingFailure,0.010899995686486363,0.04650000482797623,0,15.0
+"One corrupted share, not enough redundancy",13,3,5,4,1,Failure,False,False,False,DecodingFailure,0.015900004655122757,0.03919999289792031,0,15.0
+"One corrupted share, not enough redundancy",14,3,5,4,1,Failure,False,False,False,DecodingFailure,0.01130001328419894,0.03940000897273421,0,15.0
+"One corrupted share, not enough redundancy",15,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011299998732283711,0.03849998756777495,0,15.0
+"One corrupted share, not enough redundancy",16,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011099997209385037,0.038300000596791506,0,15.0
+"One corrupted share, not enough redundancy",17,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011399999493733048,0.037699996028095484,0,15.0
+"One corrupted share, not enough redundancy",18,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011099997209385037,0.03989999822806567,0,15.0
+"One corrupted share, not enough redundancy",19,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011299998732283711,0.03890000516548753,0,15.0
+"One corrupted share, not enough redundancy",20,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011500000255182385,0.03890000516548753,0,15.0
+"One corrupted share, not enough redundancy",21,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011399999493733048,0.03819999983534217,0,15.0
+"One corrupted share, not enough redundancy",22,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011500000255182385,0.0374000082956627,0,15.0
+"One corrupted share, not enough redundancy",23,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011199997970834374,0.03749999450519681,0,15.0
+"One corrupted share, not enough redundancy",24,3,5,4,1,Failure,False,False,False,DecodingFailure,0.011199997970834374,0.03819999983534217,0,15.0
+"One corrupted share, not enough redundancy",25,3,5,4,1,Failure,False,False,False,DecodingFailure,0.04069998976774514,0.05459999374579638,0,15.0
+Larger normal recovery,1,4,7,7,0,Success,True,True,True,,0.023200002033263445,0.2629999944474548,0,21.0
+Larger normal recovery,2,4,7,7,0,Success,True,True,True,,0.028599999495781958,0.4566999996313825,0,21.0
+Larger normal recovery,3,4,7,7,0,Success,True,True,True,,0.021500003640539944,0.2761000068858266,0,21.0
+Larger normal recovery,4,4,7,7,0,Success,True,True,True,,0.01929998688865453,0.222400005441159,0,21.0
+Larger normal recovery,5,4,7,7,0,Success,True,True,True,,0.018799997633323073,0.21800000104121864,0,21.0
+Larger normal recovery,6,4,7,7,0,Success,True,True,True,,0.017600003047846258,0.2317000034963712,0,21.0
+Larger normal recovery,7,4,7,7,0,Success,True,True,True,,0.01790000533219427,0.21980000019539148,0,21.0
+Larger normal recovery,8,4,7,7,0,Success,True,True,True,,0.017400001524947584,0.21189999824855477,0,21.0
+Larger normal recovery,9,4,7,7,0,Success,True,True,True,,0.01750000228639692,0.22139999782666564,0,21.0
+Larger normal recovery,10,4,7,7,0,Success,True,True,True,,0.018399994587525725,0.22190000163391232,0,21.0
+Larger normal recovery,11,4,7,7,0,Success,True,True,True,,0.017600003047846258,0.21639998885802925,0,21.0
+Larger normal recovery,12,4,7,7,0,Success,True,True,True,,0.017300000763498247,0.21220000053290278,0,21.0
+Larger normal recovery,13,4,7,7,0,Success,True,True,True,,0.01720000000204891,0.2125000028172508,0,21.0
+Larger normal recovery,14,4,7,7,0,Success,True,True,True,,0.021700005163438618,0.2893000055337325,0,21.0
+Larger normal recovery,15,4,7,7,0,Success,True,True,True,,0.020399995264597237,0.22869999520480633,0,21.0
+Larger normal recovery,16,4,7,7,0,Success,True,True,True,,0.017700003809295595,0.22929999977350235,0,21.0
+Larger normal recovery,17,4,7,7,0,Success,True,True,True,,0.01750000228639692,0.21909999486524612,0,21.0
+Larger normal recovery,18,4,7,7,0,Success,True,True,True,,0.017099999240599573,0.2136999974027276,0,21.0
+Larger normal recovery,19,4,7,7,0,Success,True,True,True,,0.016600009985268116,0.21000001288484782,0,21.0
+Larger normal recovery,20,4,7,7,0,Success,True,True,True,,0.03540000761859119,0.2891000040108338,0,21.0
+Larger normal recovery,21,4,7,7,0,Success,True,True,True,,0.01990000600926578,0.27210000553168356,0,21.0
+Larger normal recovery,22,4,7,7,0,Success,True,True,True,,0.030700000934302807,0.36949999048374593,0,21.0
+Larger normal recovery,23,4,7,7,0,Success,True,True,True,,0.020400009816512465,0.5184000037843361,0,21.0
+Larger normal recovery,24,4,7,7,0,Success,True,True,True,,0.03370000922586769,0.9368000028189272,0,21.0
+Larger normal recovery,25,4,7,7,0,Success,True,True,True,,0.030700000934302807,0.38160000985953957,0,21.0
+Larger minimum recovery,1,4,7,4,0,Success,True,True,True,,0.03260000084992498,0.17250000382773578,0,21.0
+Larger minimum recovery,2,4,7,4,0,Success,True,True,True,,0.03159999323543161,0.1618999958736822,0,21.0
+Larger minimum recovery,3,4,7,4,0,Success,True,True,True,,0.03659998765215278,0.1664000010350719,0,21.0
+Larger minimum recovery,4,4,7,4,0,Success,True,True,True,,0.030099996365606785,0.14039999223314226,0,21.0
+Larger minimum recovery,5,4,7,4,0,Success,True,True,True,,0.031100003980100155,0.16070000128820539,0,21.0
+Larger minimum recovery,6,4,7,4,0,Success,True,True,True,,0.034199998481199145,0.16150000737980008,0,21.0
+Larger minimum recovery,7,4,7,4,0,Success,True,True,True,,0.034199998481199145,0.1362000039080158,0,21.0
+Larger minimum recovery,8,4,7,4,0,Success,True,True,True,,0.020799998310394585,0.1441000058548525,0,21.0
+Larger minimum recovery,9,4,7,4,0,Success,True,True,True,,0.02749999111983925,0.15730000450275838,0,21.0
+Larger minimum recovery,10,4,7,4,0,Success,True,True,True,,0.02920000406447798,0.14050000754650682,0,21.0
+Larger minimum recovery,11,4,7,4,0,Success,True,True,True,,0.031200004741549492,0.14699999883305281,0,21.0
+Larger minimum recovery,12,4,7,4,0,Success,True,True,True,,0.03399999695830047,0.155999994603917,0,21.0
+Larger minimum recovery,13,4,7,4,0,Success,True,True,True,,0.027999994927085936,0.15970000822562724,0,21.0
+Larger minimum recovery,14,4,7,4,0,Success,True,True,True,,0.028799986466765404,0.1539999939268455,0,21.0
+Larger minimum recovery,15,4,7,4,0,Success,True,True,True,,0.029699993319809437,0.20519999088719487,0,21.0
+Larger minimum recovery,16,4,7,4,0,Success,True,True,True,,0.029999995604157448,0.14060000830795616,0,21.0
+Larger minimum recovery,17,4,7,4,0,Success,True,True,True,,0.028099995688535273,0.14630000805482268,0,21.0
+Larger minimum recovery,18,4,7,4,0,Success,True,True,True,,0.021100000594742596,0.09329999738838524,0,21.0
+Larger minimum recovery,19,4,7,4,0,Success,True,True,True,,0.01780000457074493,0.11039999662898481,0,21.0
+Larger minimum recovery,20,4,7,4,0,Success,True,True,True,,0.019099999917671084,0.10199999087490141,0,21.0
+Larger minimum recovery,21,4,7,4,0,Success,True,True,True,,0.018499995348975062,0.0838999985717237,0,21.0
+Larger minimum recovery,22,4,7,4,0,Success,True,True,True,,0.017300000763498247,0.10259999544359744,0,21.0
+Larger minimum recovery,23,4,7,4,0,Success,True,True,True,,0.024499997380189598,0.09460000728722662,0,21.0
+Larger minimum recovery,24,4,7,4,0,Success,True,True,True,,0.023100001271814108,0.09459999273531139,0,21.0
+Larger minimum recovery,25,4,7,4,0,Success,True,True,True,,0.017400001524947584,0.10459999612066895,0,21.0
+Larger insufficient shares,1,4,7,3,0,Failure,False,False,False,DecodingFailure,0.016999998479150236,0.0032999960239976645,0,21.0
+Larger insufficient shares,2,4,7,3,0,Failure,False,False,False,DecodingFailure,0.016300007700920105,0.0016999983927235007,0,21.0
+Larger insufficient shares,3,4,7,3,0,Failure,False,False,False,DecodingFailure,0.07219999679364264,0.0023000029614195228,0,21.0
+Larger insufficient shares,4,4,7,3,0,Failure,False,False,False,DecodingFailure,0.016600009985268116,0.0014999968698248267,0,21.0
+Larger insufficient shares,5,4,7,3,0,Failure,False,False,False,DecodingFailure,0.01479999627918005,0.0011999945854768157,0,21.0
+Larger insufficient shares,6,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015700003132224083,0.0031999952625483274,0,21.0
+Larger insufficient shares,7,4,7,3,0,Failure,False,False,False,DecodingFailure,0.01510001311544329,0.0013999961083754897,0,21.0
+Larger insufficient shares,8,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015600002370774746,0.0018999999156221747,0,21.0
+Larger insufficient shares,9,4,7,3,0,Failure,False,False,False,DecodingFailure,0.016299993149004877,0.0014999968698248267,0,21.0
+Larger insufficient shares,10,4,7,3,0,Failure,False,False,False,DecodingFailure,0.016299993149004877,0.0028999929782003164,0,21.0
+Larger insufficient shares,11,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015300000086426735,0.001300009898841381,0,21.0
+Larger insufficient shares,12,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014899997040629387,0.0011999945854768157,0,21.0
+Larger insufficient shares,13,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014999997802078724,0.0011999945854768157,0,21.0
+Larger insufficient shares,14,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015500001609325409,0.0012999953469261527,0,21.0
+Larger insufficient shares,15,4,7,3,0,Failure,False,False,False,DecodingFailure,0.019500002963468432,0.00689999433234334,0,21.0
+Larger insufficient shares,16,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014999997802078724,0.0012999953469261527,0,21.0
+Larger insufficient shares,17,4,7,3,0,Failure,False,False,False,DecodingFailure,0.01440000778529793,0.001200009137392044,0,21.0
+Larger insufficient shares,18,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015300000086426735,0.0010999938240274787,0,21.0
+Larger insufficient shares,19,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015300000086426735,0.0011999945854768157,0,21.0
+Larger insufficient shares,20,4,7,3,0,Failure,False,False,False,DecodingFailure,0.015099998563528061,0.001200009137392044,0,21.0
+Larger insufficient shares,21,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014500008546747267,0.001200009137392044,0,21.0
+Larger insufficient shares,22,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014899997040629387,0.0013999961083754897,0,21.0
+Larger insufficient shares,23,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014199991710484028,0.001100008375942707,0,21.0
+Larger insufficient shares,24,4,7,3,0,Failure,False,False,False,DecodingFailure,0.014600009308196604,0.0011999945854768157,0,21.0
+Larger insufficient shares,25,4,7,3,0,Failure,False,False,False,DecodingFailure,0.01440000778529793,0.0012999953469261527,0,21.0
+Correct one corrupted share,1,4,7,6,1,Success,True,True,True,,0.01479999627918005,0.23469999723602086,1,21.0
+Correct one corrupted share,2,4,7,6,1,Success,True,True,True,,0.017700003809295595,0.2165000041713938,1,21.0
+Correct one corrupted share,3,4,7,6,1,Success,True,True,True,,0.0168999977177009,0.2080000122077763,1,21.0
+Correct one corrupted share,4,4,7,6,1,Success,True,True,True,,0.016900012269616127,0.31949998810887337,1,21.0
+Correct one corrupted share,5,4,7,6,1,Success,True,True,True,,0.025899993488565087,0.31010000384412706,1,21.0
+Correct one corrupted share,6,4,7,6,1,Success,True,True,True,,0.03060000017285347,0.2893000055337325,1,21.0
+Correct one corrupted share,7,4,7,6,1,Success,True,True,True,,0.020499996026046574,0.24280000070575625,1,21.0
+Correct one corrupted share,8,4,7,6,1,Success,True,True,True,,0.018300008377991617,0.26760000037029386,1,21.0
+Correct one corrupted share,9,4,7,6,1,Success,True,True,True,,0.017300000763498247,0.21769999875687063,1,21.0
+Correct one corrupted share,10,4,7,6,1,Success,True,True,True,,0.017099999240599573,0.2390000008745119,1,21.0
+Correct one corrupted share,11,4,7,6,1,Success,True,True,True,,0.016399993910454214,0.20349999249447137,1,21.0
+Correct one corrupted share,12,4,7,6,1,Success,True,True,True,,0.016699996194802225,0.2027000009547919,1,21.0
+Correct one corrupted share,13,4,7,6,1,Success,True,True,True,,0.016299993149004877,0.20300000323913991,1,21.0
+Correct one corrupted share,14,4,7,6,1,Success,True,True,True,,0.016699996194802225,0.20029999723192304,1,21.0
+Correct one corrupted share,15,4,7,6,1,Success,True,True,True,,0.024599998141638935,0.20950000907760113,1,21.0
+Correct one corrupted share,16,4,7,6,1,Success,True,True,True,,0.01720000000204891,0.2094000083161518,1,21.0
+Correct one corrupted share,17,4,7,6,1,Success,True,True,True,,0.016299993149004877,0.2069000038318336,1,21.0
+Correct one corrupted share,18,4,7,6,1,Success,True,True,True,,0.016399993910454214,0.21389999892562628,1,21.0
+Correct one corrupted share,19,4,7,6,1,Success,True,True,True,,0.01619999238755554,0.2018000086536631,1,21.0
+Correct one corrupted share,20,4,7,6,1,Success,True,True,True,,0.016599995433352888,0.20450000010896474,1,21.0
+Correct one corrupted share,21,4,7,6,1,Success,True,True,True,,0.016599995433352888,0.2023999986704439,1,21.0
+Correct one corrupted share,22,4,7,6,1,Success,True,True,True,,0.016599995433352888,0.3836999967461452,1,21.0
+Correct one corrupted share,23,4,7,6,1,Success,True,True,True,,0.0425000034738332,0.2863000117940828,1,21.0
+Correct one corrupted share,24,4,7,6,1,Success,True,True,True,,0.02370000584051013,0.2804000105243176,1,21.0
+Correct one corrupted share,25,4,7,6,1,Success,True,True,True,,0.0219999928958714,0.2384999970672652,1,21.0
+Correct two corrupted shares,1,4,8,8,2,Success,True,True,True,,0.019400002202019095,0.4222999996272847,2,24.0
+Correct two corrupted shares,2,4,8,8,2,Success,True,True,True,,0.018800012185238302,0.37230001180432737,2,24.0
+Correct two corrupted shares,3,4,8,8,2,Success,True,True,True,,0.018400009139440954,0.3687999997055158,2,24.0
+Correct two corrupted shares,4,4,8,8,2,Success,True,True,True,,0.018000006093643606,0.4048999981023371,2,24.0
+Correct two corrupted shares,5,4,8,8,2,Success,True,True,True,,0.01819999306462705,0.378400000045076,2,24.0
+Correct two corrupted shares,6,4,8,8,2,Success,True,True,True,,0.019500002963468432,0.3963999915868044,2,24.0
+Correct two corrupted shares,7,4,8,8,2,Success,True,True,True,,0.01790000533219427,0.4005999944638461,2,24.0
+Correct two corrupted shares,8,4,8,8,2,Success,True,True,True,,0.01889999839477241,0.37399999564513564,2,24.0
+Correct two corrupted shares,9,4,8,8,2,Success,True,True,True,,0.018400009139440954,0.37229999725241214,2,24.0
+Correct two corrupted shares,10,4,8,8,2,Success,True,True,True,,0.018100006855092943,0.4005999944638461,2,24.0
+Correct two corrupted shares,11,4,8,8,2,Success,True,True,True,,0.019099999917671084,0.3701999958138913,2,24.0
+Correct two corrupted shares,12,4,8,8,2,Success,True,True,True,,0.01679999695625156,0.4521999944699928,2,24.0
+Correct two corrupted shares,13,4,8,8,2,Success,True,True,True,,0.0337999954354018,0.6458999996539205,2,24.0
+Correct two corrupted shares,14,4,8,8,2,Success,True,True,True,,0.023100001271814108,0.3929000085918233,2,24.0
+Correct two corrupted shares,15,4,8,8,2,Success,True,True,True,,0.019799990695901215,0.39590000233147293,2,24.0
+Correct two corrupted shares,16,4,8,8,2,Success,True,True,True,,0.028599999495781958,0.3605999954743311,2,24.0
+Correct two corrupted shares,17,4,8,8,2,Success,True,True,True,,0.01889999839477241,0.3823999868473038,2,24.0
+Correct two corrupted shares,18,4,8,8,2,Success,True,True,True,,0.018399994587525725,0.38579999818466604,2,24.0
+Correct two corrupted shares,19,4,8,8,2,Success,True,True,True,,0.0202999945031479,0.37460000021383166,2,24.0
+Correct two corrupted shares,20,4,8,8,2,Success,True,True,True,,0.018000006093643606,0.3817000106209889,2,24.0
+Correct two corrupted shares,21,4,8,8,2,Success,True,True,True,,0.018799997633323073,0.3704999980982393,2,24.0
+Correct two corrupted shares,22,4,8,8,2,Success,True,True,True,,0.018100006855092943,0.38729999505449086,2,24.0
+Correct two corrupted shares,23,4,8,8,2,Success,True,True,True,,0.019500002963468432,0.3733000048669055,2,24.0
+Correct two corrupted shares,24,4,8,8,2,Success,True,True,True,,0.018699996871873736,0.3601000062189996,2,24.0
+Correct two corrupted shares,25,4,8,8,2,Success,True,True,True,,0.018499995348975062,0.49730000318959355,2,24.0
+Large threshold normal,1,5,10,10,0,Success,True,True,True,,0.04339999577496201,0.7006999949226156,0,30.0
+Large threshold normal,2,5,10,10,0,Success,True,True,True,,0.02849999873433262,0.6253000028664246,0,30.0
+Large threshold normal,3,5,10,10,0,Success,True,True,True,,0.025500004994682968,0.5911999905947596,0,30.0
+Large threshold normal,4,5,10,10,0,Success,True,True,True,,0.02479999966453761,0.8246999932453036,0,30.0
+Large threshold normal,5,5,10,10,0,Success,True,True,True,,0.02850001328624785,0.6409999914467335,0,30.0
+Large threshold normal,6,5,10,10,0,Success,True,True,True,,0.027099988074041903,0.6279999943217263,0,30.0
+Large threshold normal,7,5,10,10,0,Success,True,True,True,,0.025399989681318402,0.611600000411272,0,30.0
+Large threshold normal,8,5,10,10,0,Success,True,True,True,,0.02649999805726111,0.8040999964578077,0,30.0
+Large threshold normal,9,5,10,10,0,Success,True,True,True,,0.04300000728107989,0.6571999983862042,0,30.0
+Large threshold normal,10,5,10,10,0,Success,True,True,True,,0.026599998818710446,0.6162000063341111,0,30.0
+Large threshold normal,11,5,10,10,0,Success,True,True,True,,0.027299989596940577,0.6028000061633065,0,30.0
+Large threshold normal,12,5,10,10,0,Success,True,True,True,,0.025500004994682968,0.6526999932248145,0,30.0
+Large threshold normal,13,5,10,10,0,Success,True,True,True,,0.025600005756132305,0.6257999921217561,0,30.0
+Large threshold normal,14,5,10,10,0,Success,True,True,True,,0.026299996534362435,0.603299995418638,0,30.0
+Large threshold normal,15,5,10,10,0,Success,True,True,True,,0.034900003811344504,0.6206999969435856,0,30.0
+Large threshold normal,16,5,10,10,0,Success,True,True,True,,0.02579999272711575,0.6305999995674938,0,30.0
+Large threshold normal,17,5,10,10,0,Success,True,True,True,,0.02570000651758164,0.6509000086225569,0,30.0
+Large threshold normal,18,5,10,10,0,Success,True,True,True,,0.025899993488565087,0.6043999892426655,0,30.0
+Large threshold normal,19,5,10,10,0,Success,True,True,True,,0.02479999966453761,0.6015999970259145,0,30.0
+Large threshold normal,20,5,10,10,0,Success,True,True,True,,0.02510000194888562,0.6009000062476844,0,30.0
+Large threshold normal,21,5,10,10,0,Success,True,True,True,,0.02570000651758164,0.6062000029487535,0,30.0
+Large threshold normal,22,5,10,10,0,Success,True,True,True,,0.024800014216452837,0.6070999952498823,0,30.0
+Large threshold normal,23,5,10,10,0,Success,True,True,True,,0.025399989681318402,0.6036999984644353,0,30.0
+Large threshold normal,24,5,10,10,0,Success,True,True,True,,0.024300010409206152,0.5974999949103221,0,30.0
+Large threshold normal,25,5,10,10,0,Success,True,True,True,,0.023600005079060793,0.8202000026358292,0,30.0
+Large threshold minimum,1,5,10,5,0,Success,True,True,True,,0.050399990868754685,0.21240000205580145,0,30.0
+Large threshold minimum,2,5,10,5,0,Success,True,True,True,,0.03840000135824084,0.14619999274145812,0,30.0
+Large threshold minimum,3,5,10,5,0,Success,True,True,True,,0.02680000034160912,0.12519999290816486,0,30.0
+Large threshold minimum,4,5,10,5,0,Success,True,True,True,,0.025500004994682968,0.11950000771321356,0,30.0
+Large threshold minimum,5,5,10,5,0,Success,True,True,True,,0.02519998815841973,0.11709998943842947,0,30.0
+Large threshold minimum,6,5,10,5,0,Success,True,True,True,,0.025399989681318402,0.11660000018309802,0,30.0
+Large threshold minimum,7,5,10,5,0,Success,True,True,True,,0.024499997380189598,0.13870000839233398,0,30.0
+Large threshold minimum,8,5,10,5,0,Success,True,True,True,,0.025300003471784294,0.11499998799990863,0,30.0
+Large threshold minimum,9,5,10,5,0,Success,True,True,True,,0.025000001187436283,0.11100000119768083,0,30.0
+Large threshold minimum,10,5,10,5,0,Success,True,True,True,,0.04430000262800604,0.1272999943466857,0,30.0
+Large threshold minimum,11,5,10,5,0,Success,True,True,True,,0.024900000425986946,0.11649999942164868,0,30.0
+Large threshold minimum,12,5,10,5,0,Success,True,True,True,,0.024599998141638935,0.13870000839233398,0,30.0
+Large threshold minimum,13,5,10,5,0,Success,True,True,True,,0.025299988919869065,0.11520000407472253,0,30.0
+Large threshold minimum,14,5,10,5,0,Success,True,True,True,,0.022899999748915434,0.11049999739043415,0,30.0
+Large threshold minimum,15,5,10,5,0,Success,True,True,True,,0.024599998141638935,0.1142999972216785,0,30.0
+Large threshold minimum,16,5,10,5,0,Success,True,True,True,,0.023999993572942913,0.10999999358318746,0,30.0
+Large threshold minimum,17,5,10,5,0,Success,True,True,True,,0.03199999628122896,0.11399999493733048,0,30.0
+Large threshold minimum,18,5,10,5,0,Success,True,True,True,,0.02780000795610249,0.11510000331327319,0,30.0
+Large threshold minimum,19,5,10,5,0,Success,True,True,True,,0.02409999433439225,0.11400000948924571,0,30.0
+Large threshold minimum,20,5,10,5,0,Success,True,True,True,,0.022799998987466097,0.11059999815188348,0,30.0
+Large threshold minimum,21,5,10,5,0,Success,True,True,True,,0.02440001117065549,0.1255000097444281,0,30.0
+Large threshold minimum,22,5,10,5,0,Success,True,True,True,,0.024499997380189598,0.1120000088121742,0,30.0
+Large threshold minimum,23,5,10,5,0,Success,True,True,True,,0.02439999661874026,0.1795999996829778,0,30.0
+Large threshold minimum,24,5,10,5,0,Success,True,True,True,,0.025000001187436283,0.11709998943842947,0,30.0
+Large threshold minimum,25,5,10,5,0,Success,True,True,True,,0.02440001117065549,0.11249999806750566,0,30.0
+Large threshold insufficient,1,5,10,4,0,Failure,False,False,False,DecodingFailure,0.024499997380189598,0.0027999922167509794,0,30.0
+Large threshold insufficient,2,5,10,4,0,Failure,False,False,False,DecodingFailure,0.023199987481348217,0.0015999976312741637,0,30.0
+Large threshold insufficient,3,5,10,4,0,Failure,False,False,False,DecodingFailure,0.022799998987466097,0.001700012944638729,0,30.0
+Large threshold insufficient,4,5,10,4,0,Failure,False,False,False,DecodingFailure,0.023200002033263445,0.001400010660290718,0,30.0
+Large threshold insufficient,5,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02340000355616212,0.001300009898841381,0,30.0
+Large threshold insufficient,6,5,10,4,0,Failure,False,False,False,DecodingFailure,0.022100008209235966,0.0012999953469261527,0,30.0
+Large threshold insufficient,7,5,10,4,0,Failure,False,False,False,DecodingFailure,0.023100001271814108,0.001300009898841381,0,30.0
+Large threshold insufficient,8,5,10,4,0,Failure,False,False,False,DecodingFailure,0.044899992644786835,0.0037999998312443495,0,30.0
+Large threshold insufficient,9,5,10,4,0,Failure,False,False,False,DecodingFailure,0.046200002543628216,0.0034999975468963385,0,30.0
+Large threshold insufficient,10,5,10,4,0,Failure,False,False,False,DecodingFailure,0.04199999966658652,0.003100009053014219,0,30.0
+Large threshold insufficient,11,5,10,4,0,Failure,False,False,False,DecodingFailure,0.04350001108832657,0.002700006007216871,0,30.0
+Large threshold insufficient,12,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02540000423323363,0.0017999991541728377,0,30.0
+Large threshold insufficient,13,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02510000194888562,0.0015999976312741637,0,30.0
+Large threshold insufficient,14,5,10,4,0,Failure,False,False,False,DecodingFailure,0.03619999915827066,0.0015999976312741637,0,30.0
+Large threshold insufficient,15,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02479999966453761,0.0015999976312741637,0,30.0
+Large threshold insufficient,16,5,10,4,0,Failure,False,False,False,DecodingFailure,0.024199995095841587,0.0012999953469261527,0,30.0
+Large threshold insufficient,17,5,10,4,0,Failure,False,False,False,DecodingFailure,0.028800001018680632,0.001400010660290718,0,30.0
+Large threshold insufficient,18,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02300000051036477,0.001300009898841381,0,30.0
+Large threshold insufficient,19,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02300000051036477,0.0021999876480549574,0,30.0
+Large threshold insufficient,20,5,10,4,0,Failure,False,False,False,DecodingFailure,0.02379999205004424,0.0014999968698248267,0,30.0
+Large threshold insufficient,21,5,10,4,0,Failure,False,False,False,DecodingFailure,0.022599997464567423,0.0011999945854768157,0,30.0
+Large threshold insufficient,22,5,10,4,0,Failure,False,False,False,DecodingFailure,0.021500003640539944,0.001200009137392044,0,30.0
+Large threshold insufficient,23,5,10,4,0,Failure,False,False,False,DecodingFailure,0.021900006686337292,0.0012999953469261527,0,30.0
+Large threshold insufficient,24,5,10,4,0,Failure,False,False,False,DecodingFailure,0.0219999928958714,0.0011999945854768157,0,30.0
+Large threshold insufficient,25,5,10,4,0,Failure,False,False,False,DecodingFailure,0.022400010493583977,0.0011999945854768157,0,30.0
+"Large threshold, one corrupted",1,5,10,7,1,Success,True,True,True,,0.022299995180219412,0.2972000074805692,1,30.0
+"Large threshold, one corrupted",2,5,10,7,1,Success,True,True,True,,0.023800006601959467,0.28639999800361693,1,30.0
+"Large threshold, one corrupted",3,5,10,7,1,Success,True,True,True,,0.02510000194888562,0.2759000053629279,1,30.0
+"Large threshold, one corrupted",4,5,10,7,1,Success,True,True,True,,0.02479999966453761,0.2725000085774809,1,30.0
+"Large threshold, one corrupted",5,5,10,7,1,Success,True,True,True,,0.024499997380189598,0.2793000021483749,1,30.0
+"Large threshold, one corrupted",6,5,10,7,1,Success,True,True,True,,0.024599998141638935,0.26390000130049884,1,30.0
+"Large threshold, one corrupted",7,5,10,7,1,Success,True,True,True,,0.024599998141638935,0.26190000062342733,1,30.0
+"Large threshold, one corrupted",8,5,10,7,1,Success,True,True,True,,0.023800006601959467,0.27289999707136303,1,30.0
+"Large threshold, one corrupted",9,5,10,7,1,Success,True,True,True,,0.023900007363408804,0.2632999967318028,1,30.0
+"Large threshold, one corrupted",10,5,10,7,1,Success,True,True,True,,0.025600005756132305,0.272299992502667,1,30.0
+"Large threshold, one corrupted",11,5,10,7,1,Success,True,True,True,,0.024900000425986946,0.25680000544525683,1,30.0
+"Large threshold, one corrupted",12,5,10,7,1,Success,True,True,True,,0.02439999661874026,0.2569999924162403,1,30.0
+"Large threshold, one corrupted",13,5,10,7,1,Success,True,True,True,,0.024300010409206152,0.27910000062547624,1,30.0
+"Large threshold, one corrupted",14,5,10,7,1,Success,True,True,True,,0.02479999966453761,0.2604000037536025,1,30.0
+"Large threshold, one corrupted",15,5,10,7,1,Success,True,True,True,,0.024599998141638935,0.46570000995416194,1,30.0
+"Large threshold, one corrupted",16,5,10,7,1,Success,True,True,True,,0.026900001103058457,0.2747000107774511,1,30.0
+"Large threshold, one corrupted",17,5,10,7,1,Success,True,True,True,,0.02579999272711575,0.27150000096298754,1,30.0
+"Large threshold, one corrupted",18,5,10,7,1,Success,True,True,True,,0.03159999323543161,0.2747999969869852,1,30.0
+"Large threshold, one corrupted",19,5,10,7,1,Success,True,True,True,,0.02469999890308827,0.25910000840667635,1,30.0
+"Large threshold, one corrupted",20,5,10,7,1,Success,True,True,True,,0.02479999966453761,0.26509999588597566,1,30.0
+"Large threshold, one corrupted",21,5,10,7,1,Success,True,True,True,,0.024600012693554163,0.3591999993659556,1,30.0
+"Large threshold, one corrupted",22,5,10,7,1,Success,True,True,True,,0.03060000017285347,0.29429999995045364,1,30.0
+"Large threshold, one corrupted",23,5,10,7,1,Success,True,True,True,,0.026699999580159783,0.2857000072253868,1,30.0
+"Large threshold, one corrupted",24,5,10,7,1,Success,True,True,True,,0.02479999966453761,0.27809999301098287,1,30.0
+"Large threshold, one corrupted",25,5,10,7,1,Success,True,True,True,,0.02510000194888562,0.2742999931797385,1,30.0
+"Large threshold, two corrupted",1,5,10,9,2,Success,True,True,True,,0.02519998815841973,0.48909999895840883,2,30.0
+"Large threshold, two corrupted",2,5,10,9,2,Success,True,True,True,,0.02649999805726111,0.4626000009011477,2,30.0
+"Large threshold, two corrupted",3,5,10,9,2,Success,True,True,True,,0.02549999044276774,0.4690999921876937,2,30.0
+"Large threshold, two corrupted",4,5,10,9,2,Success,True,True,True,,0.025300003471784294,0.6239000067580491,2,30.0
+"Large threshold, two corrupted",5,5,10,9,2,Success,True,True,True,,0.04579999949783087,0.7237999961944297,2,30.0
+"Large threshold, two corrupted",6,5,10,9,2,Success,True,True,True,,0.02890000178012997,0.47250000352505594,2,30.0
+"Large threshold, two corrupted",7,5,10,9,2,Success,True,True,True,,0.026699999580159783,0.4741000011563301,2,30.0
+"Large threshold, two corrupted",8,5,10,9,2,Success,True,True,True,,0.025399989681318402,0.5498999962583184,2,30.0
+"Large threshold, two corrupted",9,5,10,9,2,Success,True,True,True,,0.03680000372696668,0.45599999430123717,2,30.0
+"Large threshold, two corrupted",10,5,10,9,2,Success,True,True,True,,0.02479999966453761,0.444200006313622,2,30.0
+"Large threshold, two corrupted",11,5,10,9,2,Success,True,True,True,,0.02469999890308827,0.44079999497625977,2,30.0
+"Large threshold, two corrupted",12,5,10,9,2,Success,True,True,True,,0.024499997380189598,0.4621999978553504,2,30.0
+"Large threshold, two corrupted",13,5,10,9,2,Success,True,True,True,,0.024499997380189598,0.4478999908315018,2,30.0
+"Large threshold, two corrupted",14,5,10,9,2,Success,True,True,True,,0.022499996703118086,0.4724999889731407,2,30.0
+"Large threshold, two corrupted",15,5,10,9,2,Success,True,True,True,,0.02479999966453761,0.4626000009011477,2,30.0
+"Large threshold, two corrupted",16,5,10,9,2,Success,True,True,True,,0.02519998815841973,0.4588000010699034,2,30.0
+"Large threshold, two corrupted",17,5,10,9,2,Success,True,True,True,,0.02469999890308827,0.4394000134197995,2,30.0
+"Large threshold, two corrupted",18,5,10,9,2,Success,True,True,True,,0.024299995857290924,0.45789999421685934,2,30.0
+"Large threshold, two corrupted",19,5,10,9,2,Success,True,True,True,,0.03399999695830047,0.44779999007005244,2,30.0
+"Large threshold, two corrupted",20,5,10,9,2,Success,True,True,True,,0.024300010409206152,0.4729000065708533,2,30.0
+"Large threshold, two corrupted",21,5,10,9,2,Success,True,True,True,,0.023499989765696228,0.4428999964147806,2,30.0
+"Large threshold, two corrupted",22,5,10,9,2,Success,True,True,True,,0.023899992811493576,0.45179999142419547,2,30.0
+"Large threshold, two corrupted",23,5,10,9,2,Success,True,True,True,,0.0236999912885949,0.44329999946057796,2,30.0
+"Large threshold, two corrupted",24,5,10,9,2,Success,True,True,True,,0.024199995095841587,0.45319998753257096,2,30.0
+"Large threshold, two corrupted",25,5,10,9,2,Success,True,True,True,,0.02400000812485814,0.44809999235440046,2,30.0

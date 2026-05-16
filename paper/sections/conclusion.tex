@@ -1,0 +1,7 @@
+\section{Conclusion}
+
+This paper presented a practical key recovery framework that combines Shamir Secret Sharing with Reed-Solomon-style Berlekamp-Welch decoding. The implementation protects an AES-256 key by distributing it into threshold shares and reconstructing it robustly in the presence of missing or corrupted inputs. A modular Python prototype was developed and evaluated on fifteen scenarios covering nominal recovery, threshold-limited failure, and corrupted-share recovery.
+
+The experimental results matched the theoretical bounds exactly across 375 trials. Recovery succeeded in every valid scenario and failed in every invalid scenario, while mean recovery times remained below one millisecond for all tested configurations. These findings show that robust reconstruction can improve the availability of threshold key management without weakening its confidentiality guarantees.
+
+Future work can extend the prototype with share authentication, verifiable secret sharing, compact serialization, and larger-scale performance measurements. The present results already show that coding-theoretic decoding can be integrated into threshold key recovery without altering the underlying secrecy threshold.
