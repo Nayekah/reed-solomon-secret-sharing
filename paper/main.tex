@@ -12,8 +12,10 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{url}
+\usepackage{xurl}
 \usepackage{lettrine}
 \usepackage{float}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -41,8 +43,10 @@
 \makeatother
 
 \newcommand{\ulineurl}[1]{\url{#1}}
+\urlstyle{same}
 
 \begin{document}
+\bstctlcite{RSBSTControl}
 
 \title{A Fault-Tolerant Cryptographic Key Recovery\\
 Framework Using Reed-Solomon-Decoded\\

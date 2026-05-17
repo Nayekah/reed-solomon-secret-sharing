@@ -19,7 +19,7 @@ cryptography>=43.0.0
 From the repository root:
 
 ```powershell
-py -3 -m pip install -r src/requirements.txt
+py -3 -m pip install -r requirements.txt
 ```
 
 ## Running the Experiments
